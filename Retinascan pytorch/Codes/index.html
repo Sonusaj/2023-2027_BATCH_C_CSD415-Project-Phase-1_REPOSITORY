@@ -1,0 +1,3135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Retina-Scan | Diabetic Retinopathy Screening</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+
+<body>
+
+<!-- ================================================================
+     HEADER
+================================================================ -->
+
+<header class="main-header">
+
+    <div class="header-container">
+
+        <a href="#" class="brand" id="brandHomeLink">
+
+            <div class="brand-icon">
+                <i data-lucide="eye"></i>
+            </div>
+
+            <div class="brand-text">
+
+                <span class="brand-name">
+                    Retina-Scan
+                </span>
+
+                <span class="brand-subtitle">
+                    AI Screening System
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <button class="nav-btn active"
+                    id="navHomeBtn">
+                Home
+            </button>
+
+            <button class="nav-btn"
+                    id="navLabBtn">
+                Diagnosis Lab
+            </button>
+
+            <button class="nav-btn"
+                    id="openPipelineModalBtn">
+                Model Architecture
+            </button>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <div class="live-pill">
+
+                <span class="live-dot"></span>
+
+                PyTorch / EfficientNet-B1 Active
+
+            </div>
+
+
+            <button class="header-launch-btn"
+                    id="headerStartBtn">
+
+                Launch Lab
+
+                <i data-lucide="arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================================================================
+     HOME VIEW
+================================================================ -->
+
+<main id="homeView" class="main-view">
+
+    <section class="hero-section">
+
+        <div class="hero-container">
+
+
+            <!-- HERO CONTENT -->
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+
+                    <span></span>
+
+                    EfficientNet-B1 + Multi-Scale Spatial Attention
+
+                </div>
+
+
+                <h1>
+
+                    Automated Diabetic Retinopathy
+
+                    <span>
+                        Screening &amp; Grading
+                    </span>
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    An AI-assisted retinal fundus image screening
+                    system designed to classify diabetic retinopathy
+                    into five severity stages using EfficientNet-B1,
+                    Multi-Scale Spatial Attention (MSAG), and
+                    Grad-CAM visualization.
+
+                </p>
+
+
+                <div class="hero-actions">
+
+                    <button class="primary-btn"
+                            id="heroAnalyzeBtn">
+
+                        Start Screening
+
+                        <i data-lucide="arrow-right"></i>
+
+                    </button>
+
+
+                    <button class="secondary-btn"
+                            id="heroPipelineBtn">
+
+                        View Model
+
+                        <i data-lucide="layers"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="hero-stats">
+
+                    <div class="stat-item">
+
+                        <strong>5</strong>
+
+                        <span>
+                            DR Stages
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-item">
+
+                        <strong>B1</strong>
+
+                        <span>
+                            EfficientNet
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-item">
+
+                        <strong>MSAG</strong>
+
+                        <span>
+                            Attention
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-item">
+
+                        <strong>CAM</strong>
+
+                        <span>
+                            Explainability
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- HERO VISUAL -->
+
+            <div class="hero-visual">
+
+                <div class="feature-card">
+
+                    <div class="feature-card-header">
+
+                        <div>
+
+                            <span class="small-label">
+                                SCREENING PIPELINE
+                            </span>
+
+                            <h3>
+                                Retina-Scan AI
+                            </h3>
+
+                        </div>
+
+
+                        <div class="feature-status">
+
+                            <span></span>
+
+                            ACTIVE
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="pipeline-flow">
+
+
+                        <div class="pipeline-item">
+
+                            <div class="pipeline-icon">
+                                <i data-lucide="image"></i>
+                            </div>
+
+                            <span>
+                                Fundus Image
+                            </span>
+
+                        </div>
+
+
+                        <div class="pipeline-arrow">
+                            <i data-lucide="arrow-right"></i>
+                        </div>
+
+
+                        <div class="pipeline-item">
+
+                            <div class="pipeline-icon">
+                                <i data-lucide="scan"></i>
+                            </div>
+
+                            <span>
+                                Preprocessing
+                            </span>
+
+                        </div>
+
+
+                        <div class="pipeline-arrow">
+                            <i data-lucide="arrow-right"></i>
+                        </div>
+
+
+                        <div class="pipeline-item">
+
+                            <div class="pipeline-icon">
+                                <i data-lucide="brain"></i>
+                            </div>
+
+                            <span>
+                                EfficientNet-B1
+                            </span>
+
+                        </div>
+
+
+                        <div class="pipeline-arrow">
+                            <i data-lucide="arrow-right"></i>
+                        </div>
+
+
+                        <div class="pipeline-item">
+
+                            <div class="pipeline-icon">
+                                <i data-lucide="activity"></i>
+                            </div>
+
+                            <span>
+                                Grad-CAM
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="feature-divider"></div>
+
+
+                    <div class="feature-list">
+
+                        <div class="feature-list-item">
+
+                            <i data-lucide="check-circle-2"></i>
+
+                            <span>
+                                Image preprocessing
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature-list-item">
+
+                            <i data-lucide="check-circle-2"></i>
+
+                            <span>
+                                EfficientNet-B1 classification
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature-list-item">
+
+                            <i data-lucide="check-circle-2"></i>
+
+                            <span>
+                                Multi-Scale Spatial Attention
+                            </span>
+
+                        </div>
+
+
+                        <div class="feature-list-item">
+
+                            <i data-lucide="check-circle-2"></i>
+
+                            <span>
+                                Grad-CAM explainability
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ============================================================
+         DR STAGES
+    ============================================================= -->
+
+    <section class="stages-section">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <span class="section-eyebrow">
+                    ICDR CLASSIFICATION
+                </span>
+
+                <h2>
+                    Five Stages of Diabetic Retinopathy
+                </h2>
+
+                <p>
+                    Retina-Scan classifies retinal fundus images into
+                    five diabetic retinopathy severity categories.
+                </p>
+
+            </div>
+
+
+            <div class="stage-grid">
+
+
+                <div class="stage-card">
+
+                    <div class="stage-number">
+                        01
+                    </div>
+
+                    <h3>
+                        No DR
+                    </h3>
+
+                    <p>
+                        No visible signs of diabetic retinopathy.
+                    </p>
+
+                </div>
+
+
+                <div class="stage-card">
+
+                    <div class="stage-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Mild DR
+                    </h3>
+
+                    <p>
+                        Early retinal changes such as microaneurysms.
+                    </p>
+
+                </div>
+
+
+                <div class="stage-card">
+
+                    <div class="stage-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Moderate DR
+                    </h3>
+
+                    <p>
+                        Increased retinal abnormalities and vascular
+                        changes.
+                    </p>
+
+                </div>
+
+
+                <div class="stage-card">
+
+                    <div class="stage-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Severe DR
+                    </h3>
+
+                    <p>
+                        Extensive retinal abnormalities with higher risk.
+                    </p>
+
+                </div>
+
+
+                <div class="stage-card">
+
+                    <div class="stage-number">
+                        05
+                    </div>
+
+                    <h3>
+                        Proliferative DR
+                    </h3>
+
+                    <p>
+                        Advanced stage associated with abnormal new vessels.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- ================================================================
+     DIAGNOSIS LAB
+================================================================ -->
+
+<main id="labView"
+      class="main-view hidden">
+
+    <section class="lab-section">
+
+        <div class="lab-container">
+
+
+            <!-- LAB HEADER -->
+
+            <div class="lab-header">
+
+                <div>
+
+                    <button class="back-btn"
+                            id="backToHomeBtn">
+
+                        <i data-lucide="arrow-left"></i>
+
+                        Back to Home
+
+                    </button>
+
+
+                    <span class="section-eyebrow">
+                        SCREENING LAB
+                    </span>
+
+
+                    <h2>
+                        Retinal Fundus Screening
+                    </h2>
+
+
+                    <p>
+                        Upload a retinal fundus image to perform
+                        AI-assisted diabetic retinopathy screening.
+                    </p>
+
+                </div>
+
+
+                <button class="secondary-btn"
+                        id="labViewPipelineBtn">
+
+                    Model Architecture
+
+                    <i data-lucide="layers"></i>
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ====================================================
+                 LAB GRID
+            ===================================================== -->
+
+            <div class="lab-grid">
+
+
+                <!-- =================================================
+                     LEFT PANEL
+                ================================================== -->
+
+                <div class="lab-upload-panel">
+
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <span class="small-label">
+                                INPUT IMAGE
+                            </span>
+
+                            <h3>
+                                Fundus Image
+                            </h3>
+
+                        </div>
+
+
+                        <button class="reset-btn"
+                                id="resetBtn">
+
+                            <i data-lucide="rotate-ccw"></i>
+
+                            Reset
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- UPLOAD AREA -->
+
+                    <div class="upload-area"
+                         id="dropArea">
+
+
+                        <input type="file"
+                               id="imageUpload"
+                               accept=".png,.jpg,.jpeg,.bmp,.webp"
+                               hidden>
+
+
+                        <div id="uploadIdle"
+                             class="upload-state">
+
+                            <div class="upload-icon">
+
+                                <i data-lucide="upload-cloud"></i>
+
+                            </div>
+
+
+                            <h3>
+                                Drop retinal image here
+                            </h3>
+
+
+                            <p>
+                                or select an image from your computer
+                            </p>
+
+
+                            <button class="primary-btn"
+                                    id="browseBtn"
+                                    type="button">
+
+                                Browse Image
+
+                                <i data-lucide="folder-open"></i>
+
+                            </button>
+
+
+                            <span class="upload-formats">
+                                PNG, JPG, JPEG, BMP or WEBP
+                            </span>
+
+                        </div>
+
+
+
+                        <div id="uploadActive"
+                             class="upload-active hidden">
+
+                            <div class="file-selected-icon">
+
+                                <i data-lucide="file-image"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <strong id="fileName">
+                                    Image selected
+                                </strong>
+
+                                <span>
+                                    Ready for screening
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- IMAGE VIEWER -->
+
+                    <div class="image-viewer">
+
+
+                        <div class="viewer-header">
+
+                            <span>
+                                IMAGE PREVIEW
+                            </span>
+
+
+                            <div class="view-mode-buttons">
+
+                                <button class="view-mode-btn active"
+                                        data-mode="original">
+
+                                    Original
+
+                                </button>
+
+
+                                <button class="view-mode-btn"
+                                        data-mode="clahe">
+
+                                    Green + CLAHE
+
+                                </button>
+
+
+                                <button class="view-mode-btn"
+                                        data-mode="gradcam">
+
+                                    Grad-CAM
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="preview-viewport"
+                             id="previewViewport">
+
+
+                            <div class="panel-empty-state"
+                                 id="panelEmptyState">
+
+                                <i data-lucide="image"></i>
+
+                                <span>
+                                    No image selected
+                                </span>
+
+                            </div>
+
+
+                            <div class="panel-content-state hidden"
+                                 id="panelContentState">
+
+                                <img id="previewImage"
+                                     alt="Retinal fundus preview">
+
+
+                                <img id="previewCamImage"
+                                     class="hidden"
+                                     alt="Grad-CAM visualization">
+
+
+                                <canvas id="hiddenProcessingCanvas"
+                                        class="hidden">
+                                </canvas>
+
+
+                                <div id="laserScanner"
+                                     class="laser-scanner hidden">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ANALYZE BUTTON -->
+
+                    <button class="analyze-btn"
+                            id="analyzeBtn"
+                            disabled>
+
+                        <span class="analyze-icon">
+
+                            <i data-lucide="scan-search"></i>
+
+                        </span>
+
+
+                        <span class="analyze-text">
+                            Run Screening
+                        </span>
+
+
+                        <i data-lucide="arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     RIGHT RESULT PANEL
+                ================================================== -->
+
+                <div class="result-panel">
+
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <span class="small-label">
+                                AI RESULT
+                            </span>
+
+                            <h3>
+                                Screening Outcome
+                            </h3>
+
+                        </div>
+
+
+                        <div class="result-status">
+
+                            <span></span>
+
+                            READY
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EMPTY STATE -->
+
+                    <div id="resultEmptyState"
+                         class="result-empty-state">
+
+                        <div class="result-empty-icon">
+
+                            <i data-lucide="activity"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Awaiting Screening
+                        </h3>
+
+
+                        <p>
+                            Upload a valid retinal fundus image and
+                            run screening to view the model prediction,
+                            confidence and Grad-CAM visualization.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- RESULT CONTENT -->
+
+                    <div id="resultContentState"
+                         class="result-content-state hidden">
+
+
+                        <div class="result-main">
+
+                            <div>
+
+                                <span class="result-label">
+                                    PREDICTED STAGE
+                                </span>
+
+
+                                <h2 id="resultClass">
+                                    —
+                                </h2>
+
+
+                                <span id="severityBadge"
+                                      class="severity-badge">
+                                    —
+                                </span>
+
+                            </div>
+
+
+                            <div class="confidence-box">
+
+                                <span>
+                                    CONFIDENCE
+                                </span>
+
+
+                                <strong id="confidenceText">
+                                    —
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- CONFIDENCE BAR -->
+
+                        <div class="confidence-progress">
+
+                            <div class="progress-track">
+
+                                <div id="progressBar"
+                                     class="progress-bar"
+                                     style="width: 0%;">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- PROBABILITY SECTION -->
+
+                        <div class="probability-section">
+
+                            <div class="probability-heading">
+
+                                <span>
+                                    CLASS PROBABILITIES
+                                </span>
+
+                                <span>
+                                    MODEL OUTPUT
+                                </span>
+
+                            </div>
+
+
+
+                            <!-- CLASS 0 -->
+
+                            <div class="probability-row"
+                                 data-class="0">
+
+                                <div class="probability-label">
+
+                                    <span>
+                                        0
+                                    </span>
+
+                                    <strong>
+                                        No DR
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="probability-track">
+
+                                    <div class="probability-bar"
+                                         style="width:0%;">
+                                    </div>
+
+                                </div>
+
+
+                                <strong class="probability-value">
+                                    0.00%
+                                </strong>
+
+                            </div>
+
+
+
+                            <!-- CLASS 1 -->
+
+                            <div class="probability-row"
+                                 data-class="1">
+
+                                <div class="probability-label">
+
+                                    <span>
+                                        1
+                                    </span>
+
+                                    <strong>
+                                        Mild DR
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="probability-track">
+
+                                    <div class="probability-bar"
+                                         style="width:0%;">
+                                    </div>
+
+                                </div>
+
+
+                                <strong class="probability-value">
+                                    0.00%
+                                </strong>
+
+                            </div>
+
+
+
+                            <!-- CLASS 2 -->
+
+                            <div class="probability-row"
+                                 data-class="2">
+
+                                <div class="probability-label">
+
+                                    <span>
+                                        2
+                                    </span>
+
+                                    <strong>
+                                        Moderate DR
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="probability-track">
+
+                                    <div class="probability-bar"
+                                         style="width:0%;">
+                                    </div>
+
+                                </div>
+
+
+                                <strong class="probability-value">
+                                    0.00%
+                                </strong>
+
+                            </div>
+
+
+
+                            <!-- CLASS 3 -->
+
+                            <div class="probability-row"
+                                 data-class="3">
+
+                                <div class="probability-label">
+
+                                    <span>
+                                        3
+                                    </span>
+
+                                    <strong>
+                                        Severe DR
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="probability-track">
+
+                                    <div class="probability-bar"
+                                         style="width:0%;">
+                                    </div>
+
+                                </div>
+
+
+                                <strong class="probability-value">
+                                    0.00%
+                                </strong>
+
+                            </div>
+
+
+
+                            <!-- CLASS 4 -->
+
+                            <div class="probability-row"
+                                 data-class="4">
+
+                                <div class="probability-label">
+
+                                    <span>
+                                        4
+                                    </span>
+
+                                    <strong>
+                                        Proliferative DR
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="probability-track">
+
+                                    <div class="probability-bar"
+                                         style="width:0%;">
+                                    </div>
+
+                                </div>
+
+
+                                <strong class="probability-value">
+                                    0.00%
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- RESULT ACTION -->
+
+                        <div class="result-actions">
+
+                            <button class="primary-btn"
+                                    id="printReportBtn">
+
+                                <i data-lucide="printer"></i>
+
+                                Print Report
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- ================================================================
+     MODEL ARCHITECTURE MODAL
+================================================================ -->
+
+<div class="modal-overlay hidden"
+     id="pipelineModal">
+
+
+    <div class="pipeline-modal">
+
+
+        <button class="modal-close"
+                id="closePipelineModalBtn">
+
+            <i data-lucide="x"></i>
+
+        </button>
+
+
+        <div class="modal-header">
+
+            <span class="section-eyebrow">
+                MODEL ARCHITECTURE
+            </span>
+
+
+            <h2>
+                EfficientNet-B1 + MSAG
+            </h2>
+
+
+            <p>
+                PyTorch-based deep learning pipeline used for
+                diabetic retinopathy screening.
+            </p>
+
+        </div>
+
+
+
+        <div class="modal-model-info">
+
+
+            <div class="model-info-item">
+
+                <i data-lucide="cpu"></i>
+
+                <div>
+
+                    <span>
+                        Framework
+                    </span>
+
+                    <strong>
+                        PyTorch
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="model-info-item">
+
+                <i data-lucide="network"></i>
+
+                <div>
+
+                    <span>
+                        Backbone
+                    </span>
+
+                    <strong>
+                        EfficientNet-B1
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="model-info-item">
+
+                <i data-lucide="layers"></i>
+
+                <div>
+
+                    <span>
+                        Attention
+                    </span>
+
+                    <strong>
+                        MSAG
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="model-info-item">
+
+                <i data-lucide="scan-eye"></i>
+
+                <div>
+
+                    <span>
+                        Explainability
+                    </span>
+
+                    <strong>
+                        Grad-CAM
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="modal-pipeline">
+
+
+            <div class="modal-pipeline-step">
+
+                <span>01</span>
+
+                <strong>
+                    Input Fundus Image
+                </strong>
+
+                <p>
+                    Retinal image uploaded by the authorized user.
+                </p>
+
+            </div>
+
+
+            <div class="modal-pipeline-step">
+
+                <span>02</span>
+
+                <strong>
+                    Preprocessing
+                </strong>
+
+                <p>
+                    Image resizing and normalization before inference.
+                </p>
+
+            </div>
+
+
+            <div class="modal-pipeline-step">
+
+                <span>03</span>
+
+                <strong>
+                    EfficientNet-B1
+                </strong>
+
+                <p>
+                    Deep convolutional feature extraction.
+                </p>
+
+            </div>
+
+
+            <div class="modal-pipeline-step">
+
+                <span>04</span>
+
+                <strong>
+                    MSAG
+                </strong>
+
+                <p>
+                    Multi-Scale Spatial Attention enhances important
+                    retinal feature regions.
+                </p>
+
+            </div>
+
+
+            <div class="modal-pipeline-step">
+
+                <span>05</span>
+
+                <strong>
+                    Prediction
+                </strong>
+
+                <p>
+                    Five-class diabetic retinopathy screening output
+                    with confidence values.
+                </p>
+
+            </div>
+
+
+            <div class="modal-pipeline-step">
+
+                <span>06</span>
+
+                <strong>
+                    Grad-CAM
+                </strong>
+
+                <p>
+                    Visual explanation of regions contributing to
+                    the predicted class.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="modal-footer">
+
+            <button class="secondary-btn"
+                    id="closeModalFooterBtn">
+
+                Close
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================================================
+     FOOTER
+================================================================ -->
+
+<footer class="main-footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+            <div class="brand-icon">
+                <i data-lucide="eye"></i>
+            </div>
+
+
+            <div>
+
+                <strong>
+                    Retina-Scan
+                </strong>
+
+                <span>
+                    AI-assisted diabetic retinopathy screening
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-text">
+
+            Screening support based on EfficientNet-B1,
+            Multi-Scale Spatial Attention and Grad-CAM.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================================================================
+     PRINT REPORT
+================================================================ -->
+
+<div id="printReport"
+     class="print-report">
+
+
+    <div class="print-header">
+
+        <h1>
+            Retina-Scan Screening Report
+        </h1>
+
+        <p>
+            AI-Assisted Diabetic Retinopathy Screening
+        </p>
+
+    </div>
+
+
+
+    <div class="print-model-info">
+
+        <p>
+            <strong>Framework:</strong>
+            PyTorch
+        </p>
+
+        <p>
+            <strong>Model:</strong>
+            EfficientNet-B1 + MSAG
+        </p>
+
+        <p>
+            <strong>Explainability:</strong>
+            Grad-CAM
+        </p>
+
+    </div>
+
+
+
+    <div class="print-result">
+
+        <h2>
+            Screening Result
+        </h2>
+
+
+        <p>
+
+            <strong>
+                Predicted Stage:
+            </strong>
+
+            <span id="printClass">
+                —
+            </span>
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Confidence:
+            </strong>
+
+            <span id="printConfidence">
+                —
+            </span>
+
+        </p>
+
+    </div>
+
+
+
+    <div class="print-images">
+
+
+        <div>
+
+            <h3>
+                Original Fundus Image
+            </h3>
+
+            <img id="printOriginalImg"
+                 alt="Original fundus image">
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Grad-CAM Visualization
+            </h3>
+
+            <img id="printCamImg"
+                 alt="Grad-CAM visualization">
+
+        </div>
+
+    </div>
+
+
+
+    <div class="print-probabilities">
+
+        <h2>
+            Class Probabilities
+        </h2>
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Class
+                    </th>
+
+                    <th>
+                        Stage
+                    </th>
+
+                    <th>
+                        Probability
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="printProbabilitiesTable">
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+
+    <div class="print-disclaimer">
+
+        <strong>
+            Important:
+        </strong>
+
+        This system provides AI-assisted screening support and
+        should not be considered a standalone medical diagnosis.
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================================================
+     JAVASCRIPT
+================================================================ -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* ============================================================
+       INITIALIZE ICONS
+    ============================================================ */
+
+    if (typeof lucide !== "undefined") {
+        lucide.createIcons();
+    }
+
+
+
+    /* ============================================================
+       ELEMENT REFERENCES
+    ============================================================ */
+
+    const homeView =
+        document.getElementById("homeView");
+
+    const labView =
+        document.getElementById("labView");
+
+
+    const navHomeBtn =
+        document.getElementById("navHomeBtn");
+
+    const navLabBtn =
+        document.getElementById("navLabBtn");
+
+
+    const headerStartBtn =
+        document.getElementById("headerStartBtn");
+
+    const heroAnalyzeBtn =
+        document.getElementById("heroAnalyzeBtn");
+
+    const backToHomeBtn =
+        document.getElementById("backToHomeBtn");
+
+    const brandHomeLink =
+        document.getElementById("brandHomeLink");
+
+
+    const imageUpload =
+        document.getElementById("imageUpload");
+
+    const browseBtn =
+        document.getElementById("browseBtn");
+
+    const dropArea =
+        document.getElementById("dropArea");
+
+
+    const uploadIdle =
+        document.getElementById("uploadIdle");
+
+    const uploadActive =
+        document.getElementById("uploadActive");
+
+
+    const previewImage =
+        document.getElementById("previewImage");
+
+    const previewCamImage =
+        document.getElementById("previewCamImage");
+
+
+    const fileName =
+        document.getElementById("fileName");
+
+
+    const resetBtn =
+        document.getElementById("resetBtn");
+
+    const analyzeBtn =
+        document.getElementById("analyzeBtn");
+
+
+    const panelEmptyState =
+        document.getElementById("panelEmptyState");
+
+    const panelContentState =
+        document.getElementById("panelContentState");
+
+
+    const laserScanner =
+        document.getElementById("laserScanner");
+
+
+    const resultEmptyState =
+        document.getElementById("resultEmptyState");
+
+    const resultContentState =
+        document.getElementById("resultContentState");
+
+
+    const resultClass =
+        document.getElementById("resultClass");
+
+    const severityBadge =
+        document.getElementById("severityBadge");
+
+    const confidenceText =
+        document.getElementById("confidenceText");
+
+    const progressBar =
+        document.getElementById("progressBar");
+
+
+    const printReportBtn =
+        document.getElementById("printReportBtn");
+
+
+    const pipelineModal =
+        document.getElementById("pipelineModal");
+
+    const openPipelineModalBtn =
+        document.getElementById("openPipelineModalBtn");
+
+    const heroPipelineBtn =
+        document.getElementById("heroPipelineBtn");
+
+    const labViewPipelineBtn =
+        document.getElementById("labViewPipelineBtn");
+
+    const closePipelineModalBtn =
+        document.getElementById("closePipelineModalBtn");
+
+    const closeModalFooterBtn =
+        document.getElementById("closeModalFooterBtn");
+
+
+
+    /* ============================================================
+       CURRENT APPLICATION STATE
+    ============================================================ */
+
+    let selectedFile = null;
+
+    let currentResult = null;
+
+    let currentOriginalUrl = null;
+
+    let currentGradCamUrl = null;
+
+
+
+    /* ============================================================
+       SHOW HOME
+    ============================================================ */
+
+    function showHome() {
+
+        homeView.classList.remove("hidden");
+
+        labView.classList.add("hidden");
+
+
+        navHomeBtn.classList.add("active");
+
+        navLabBtn.classList.remove("active");
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+
+
+    /* ============================================================
+       SHOW LAB
+    ============================================================ */
+
+    function showLab() {
+
+        homeView.classList.add("hidden");
+
+        labView.classList.remove("hidden");
+
+
+        navHomeBtn.classList.remove("active");
+
+        navLabBtn.classList.add("active");
+
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
+
+
+
+    navHomeBtn.addEventListener(
+        "click",
+        showHome
+    );
+
+
+    navLabBtn.addEventListener(
+        "click",
+        showLab
+    );
+
+
+    headerStartBtn.addEventListener(
+        "click",
+        showLab
+    );
+
+
+    heroAnalyzeBtn.addEventListener(
+        "click",
+        showLab
+    );
+
+
+    backToHomeBtn.addEventListener(
+        "click",
+        showHome
+    );
+
+
+    brandHomeLink.addEventListener(
+        "click",
+        function (event) {
+
+            event.preventDefault();
+
+            showHome();
+
+        }
+    );
+
+
+
+    /* ============================================================
+       MODAL
+    ============================================================ */
+
+    function openPipelineModal() {
+
+        pipelineModal.classList.remove("hidden");
+
+        document.body.classList.add("modal-open");
+
+    }
+
+
+    function closePipelineModal() {
+
+        pipelineModal.classList.add("hidden");
+
+        document.body.classList.remove("modal-open");
+
+    }
+
+
+    openPipelineModalBtn.addEventListener(
+        "click",
+        openPipelineModal
+    );
+
+
+    heroPipelineBtn.addEventListener(
+        "click",
+        openPipelineModal
+    );
+
+
+    labViewPipelineBtn.addEventListener(
+        "click",
+        openPipelineModal
+    );
+
+
+    closePipelineModalBtn.addEventListener(
+        "click",
+        closePipelineModal
+    );
+
+
+    closeModalFooterBtn.addEventListener(
+        "click",
+        closePipelineModal
+    );
+
+
+    pipelineModal.addEventListener(
+        "click",
+        function (event) {
+
+            if (event.target === pipelineModal) {
+                closePipelineModal();
+            }
+
+        }
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Escape") {
+                closePipelineModal();
+            }
+
+        }
+    );
+
+
+
+    /* ============================================================
+       FILE BROWSER
+    ============================================================ */
+
+    browseBtn.addEventListener(
+        "click",
+        function () {
+
+            imageUpload.click();
+
+        }
+    );
+
+
+    imageUpload.addEventListener(
+        "change",
+        function (event) {
+
+            if (
+                event.target.files &&
+                event.target.files.length > 0
+            ) {
+
+                handleFileSelection(
+                    event.target.files[0]
+                );
+
+            }
+
+        }
+    );
+
+
+
+    /* ============================================================
+       HANDLE SELECTED FILE
+    ============================================================ */
+
+    function handleFileSelection(file) {
+
+        const allowedExtensions = [
+            "jpg",
+            "jpeg",
+            "png",
+            "bmp",
+            "webp"
+        ];
+
+
+        const extension =
+            file.name
+                .split(".")
+                .pop()
+                .toLowerCase();
+
+
+        if (!allowedExtensions.includes(extension)) {
+
+            alert(
+                "Please select a valid retinal image " +
+                "(PNG, JPG, JPEG, BMP or WEBP)."
+            );
+
+            return;
+
+        }
+
+
+        selectedFile = file;
+
+        currentResult = null;
+
+        currentOriginalUrl = null;
+
+        currentGradCamUrl = null;
+
+
+        fileName.textContent =
+            file.name;
+
+
+        uploadIdle.classList.add("hidden");
+
+        uploadActive.classList.remove("hidden");
+
+
+        const reader =
+            new FileReader();
+
+
+        reader.onload =
+            function (event) {
+
+                previewImage.src =
+                    event.target.result;
+
+
+                previewImage.classList.remove(
+                    "hidden"
+                );
+
+
+                previewCamImage.classList.add(
+                    "hidden"
+                );
+
+
+                panelEmptyState.classList.add(
+                    "hidden"
+                );
+
+
+                panelContentState.classList.remove(
+                    "hidden"
+                );
+
+
+                analyzeBtn.disabled = false;
+
+
+                resetResultPanel();
+
+            };
+
+
+        reader.readAsDataURL(file);
+
+    }
+
+
+
+    /* ============================================================
+       DRAG AND DROP
+    ============================================================ */
+
+    dropArea.addEventListener(
+        "dragover",
+        function (event) {
+
+            event.preventDefault();
+
+            dropArea.classList.add(
+                "drag-over"
+            );
+
+        }
+    );
+
+
+    dropArea.addEventListener(
+        "dragleave",
+        function () {
+
+            dropArea.classList.remove(
+                "drag-over"
+            );
+
+        }
+    );
+
+
+    dropArea.addEventListener(
+        "drop",
+        function (event) {
+
+            event.preventDefault();
+
+
+            dropArea.classList.remove(
+                "drag-over"
+            );
+
+
+            if (
+                event.dataTransfer.files &&
+                event.dataTransfer.files.length > 0
+            ) {
+
+                handleFileSelection(
+                    event.dataTransfer.files[0]
+                );
+
+            }
+
+        }
+    );
+
+
+
+    /* ============================================================
+       IMAGE VIEW MODES
+    ============================================================ */
+
+    document
+        .querySelectorAll(".view-mode-btn")
+        .forEach(function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    document
+                        .querySelectorAll(
+                            ".view-mode-btn"
+                        )
+                        .forEach(function (btn) {
+
+                            btn.classList.remove(
+                                "active"
+                            );
+
+                        });
+
+
+                    button.classList.add(
+                        "active"
+                    );
+
+
+                    const mode =
+                        button.dataset.mode;
+
+
+
+                    /* ORIGINAL */
+
+                    if (mode === "original") {
+
+                        previewImage.classList.remove(
+                            "hidden"
+                        );
+
+                        previewCamImage.classList.add(
+                            "hidden"
+                        );
+
+                        previewImage.classList.remove(
+                            "clahe-preview"
+                        );
+
+                    }
+
+
+
+                    /* GREEN + CLAHE */
+
+                    else if (mode === "clahe") {
+
+                        /*
+                         * This is only the existing visual
+                         * frontend preview.
+                         *
+                         * The actual preprocessing used by
+                         * the model remains inside app.py.
+                         */
+
+                        previewImage.classList.remove(
+                            "hidden"
+                        );
+
+                        previewCamImage.classList.add(
+                            "hidden"
+                        );
+
+                        previewImage.classList.add(
+                            "clahe-preview"
+                        );
+
+                    }
+
+
+
+                    /* REAL GRAD-CAM */
+
+                    else if (mode === "gradcam") {
+
+                        previewImage.classList.add(
+                            "hidden"
+                        );
+
+
+                        if (currentGradCamUrl) {
+
+                            previewCamImage.src =
+                                currentGradCamUrl;
+
+
+                            previewCamImage.classList.remove(
+                                "hidden"
+                            );
+
+                        }
+                        else {
+
+                            previewCamImage.classList.add(
+                                "hidden"
+                            );
+
+                        }
+
+                    }
+
+                }
+            );
+
+        });
+
+
+
+    /* ============================================================
+       RUN REAL FLASK PREDICTION
+    ============================================================ */
+
+    analyzeBtn.addEventListener(
+        "click",
+        async function () {
+
+            if (!selectedFile) {
+                return;
+            }
+
+
+            analyzeBtn.disabled = true;
+
+
+            const analyzeText =
+                analyzeBtn.querySelector(
+                    ".analyze-text"
+                );
+
+
+            if (analyzeText) {
+
+                analyzeText.textContent =
+                    "Analyzing...";
+
+            }
+
+
+            laserScanner.classList.remove(
+                "hidden"
+            );
+
+
+            const startTime =
+                Date.now();
+
+
+            try {
+
+
+                /* ---------------------------------------------
+                   CREATE FORM DATA
+                --------------------------------------------- */
+
+                const formData =
+                    new FormData();
+
+
+                formData.append(
+                    "file",
+                    selectedFile
+                );
+
+
+
+                /* ---------------------------------------------
+                   SEND TO FLASK
+                --------------------------------------------- */
+
+                const response =
+                    await fetch(
+                        "/predict",
+                        {
+                            method: "POST",
+                            body: formData
+                        }
+                    );
+
+
+
+                /* ---------------------------------------------
+                   READ JSON
+                --------------------------------------------- */
+
+                let data;
+
+                try {
+
+                    data =
+                        await response.json();
+
+                }
+                catch (jsonError) {
+
+                    throw new Error(
+                        "The server returned an invalid response."
+                    );
+
+                }
+
+
+
+                /* ---------------------------------------------
+                   CHECK RESPONSE
+                --------------------------------------------- */
+
+                if (
+                    !response.ok ||
+                    !data.success
+                ) {
+
+                    throw new Error(
+                        data.error ||
+                        "Screening failed. Please try again."
+                    );
+
+                }
+
+
+
+                /* ---------------------------------------------
+                   KEEP SCANNER ACTIVE FOR 3.2 SEC
+                --------------------------------------------- */
+
+                const elapsed =
+                    Date.now() - startTime;
+
+
+                const remaining =
+                    Math.max(
+                        0,
+                        3200 - elapsed
+                    );
+
+
+                if (remaining > 0) {
+
+                    await new Promise(
+                        function (resolve) {
+
+                            setTimeout(
+                                resolve,
+                                remaining
+                            );
+
+                        }
+                    );
+
+                }
+
+
+
+                /* ---------------------------------------------
+                   STORE REAL RESULT
+                --------------------------------------------- */
+
+                currentResult =
+                    data;
+
+
+                currentOriginalUrl =
+                    data.original_image;
+
+
+                currentGradCamUrl =
+                    data.gradcam_image;
+
+
+
+                /* ---------------------------------------------
+                   DISPLAY REAL RESULT
+                --------------------------------------------- */
+
+                displayResult(data);
+
+            }
+
+
+            catch (error) {
+
+                console.error(
+                    "Screening error:",
+                    error
+                );
+
+
+                showResultError(
+                    error.message ||
+                    "Unable to process the image."
+                );
+
+            }
+
+
+            finally {
+
+                laserScanner.classList.add(
+                    "hidden"
+                );
+
+
+                analyzeBtn.disabled = false;
+
+
+                if (analyzeText) {
+
+                    analyzeText.textContent =
+                        "Run Screening";
+
+                }
+
+            }
+
+        }
+    );
+
+
+
+    /* ============================================================
+       DISPLAY RESULT
+    ============================================================ */
+
+    function displayResult(data) {
+
+
+        resultEmptyState.classList.add(
+            "hidden"
+        );
+
+
+        resultContentState.classList.remove(
+            "hidden"
+        );
+
+
+        const prediction =
+            data.prediction || "—";
+
+
+        const confidence =
+            Number(data.confidence) || 0;
+
+
+        const stage =
+            Number(data.stage);
+
+
+
+        /* ---------------------------------------------
+           PREDICTION
+        --------------------------------------------- */
+
+        resultClass.textContent =
+            prediction;
+
+
+
+        /* ---------------------------------------------
+           CONFIDENCE
+        --------------------------------------------- */
+
+        confidenceText.textContent =
+            confidence.toFixed(2) + "%";
+
+
+        progressBar.style.width =
+            Math.max(
+                0,
+                Math.min(
+                    100,
+                    confidence
+                )
+            ) + "%";
+
+
+
+        /* ---------------------------------------------
+           STAGE BADGE
+        --------------------------------------------- */
+
+        updateSeverityBadge(
+            stage,
+            prediction
+        );
+
+
+
+        /* ---------------------------------------------
+           PROBABILITIES
+        --------------------------------------------- */
+
+        updateProbabilities(
+            data.probabilities
+        );
+
+
+
+        /* ---------------------------------------------
+           REAL GRAD-CAM
+        --------------------------------------------- */
+
+        if (data.gradcam_image) {
+
+            previewCamImage.src =
+                data.gradcam_image;
+
+        }
+
+
+
+        /* ---------------------------------------------
+           SERVER ORIGINAL IMAGE
+        --------------------------------------------- */
+
+        if (data.original_image) {
+
+            currentOriginalUrl =
+                data.original_image;
+
+        }
+
+
+
+        /*
+         * Return viewer to Original after analysis.
+         */
+
+        document
+            .querySelectorAll(
+                ".view-mode-btn"
+            )
+            .forEach(function (btn) {
+
+                btn.classList.remove(
+                    "active"
+                );
+
+            });
+
+
+        const originalButton =
+            document.querySelector(
+                '.view-mode-btn[data-mode="original"]'
+            );
+
+
+        if (originalButton) {
+
+            originalButton.classList.add(
+                "active"
+            );
+
+        }
+
+
+        previewImage.classList.remove(
+            "hidden"
+        );
+
+
+        previewImage.classList.remove(
+            "clahe-preview"
+        );
+
+
+        previewCamImage.classList.add(
+            "hidden"
+        );
+
+    }
+
+
+
+    /* ============================================================
+       SEVERITY BADGE
+    ============================================================ */
+
+    function updateSeverityBadge(
+        stage,
+        prediction
+    ) {
+
+        severityBadge.className =
+            "severity-badge";
+
+
+        const statusClasses = {
+
+            0: "status-safe",
+
+            1: "status-mild",
+
+            2: "status-moderate",
+
+            3: "status-severe",
+
+            4: "status-proliferative"
+
+        };
+
+
+        if (
+            Object.prototype.hasOwnProperty.call(
+                statusClasses,
+                stage
+            )
+        ) {
+
+            severityBadge.classList.add(
+                statusClasses[stage]
+            );
+
+        }
+
+
+        severityBadge.textContent =
+            prediction || "—";
+
+    }
+
+
+
+    /* ============================================================
+       UPDATE PROBABILITY BARS
+    ============================================================ */
+
+    function updateProbabilities(
+        probabilities
+    ) {
+
+        if (!Array.isArray(probabilities)) {
+            return;
+        }
+
+
+        probabilities.forEach(
+            function (item) {
+
+                const stage =
+                    Number(item.stage);
+
+
+                const probability =
+                    Number(item.probability) || 0;
+
+
+                const row =
+                    document.querySelector(
+                        `.probability-row[data-class="${stage}"]`
+                    );
+
+
+                if (!row) {
+                    return;
+                }
+
+
+                const bar =
+                    row.querySelector(
+                        ".probability-bar"
+                    );
+
+
+                const value =
+                    row.querySelector(
+                        ".probability-value"
+                    );
+
+
+                if (bar) {
+
+                    bar.style.width =
+                        Math.max(
+                            0,
+                            Math.min(
+                                100,
+                                probability
+                            )
+                        ) + "%";
+
+                }
+
+
+                if (value) {
+
+                    value.textContent =
+                        probability.toFixed(2) + "%";
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    /* ============================================================
+       RESULT ERROR
+    ============================================================ */
+
+    function showResultError(
+        message
+    ) {
+
+        resultEmptyState.classList.remove(
+            "hidden"
+        );
+
+
+        resultContentState.classList.add(
+            "hidden"
+        );
+
+
+        const title =
+            resultEmptyState.querySelector(
+                "h3"
+            );
+
+
+        const text =
+            resultEmptyState.querySelector(
+                "p"
+            );
+
+
+        if (title) {
+
+            title.textContent =
+                "Screening Failed";
+
+        }
+
+
+        if (text) {
+
+            text.textContent =
+                message;
+
+        }
+
+    }
+
+
+
+    /* ============================================================
+       RESET RESULT PANEL
+    ============================================================ */
+
+    function resetResultPanel() {
+
+
+        resultEmptyState.classList.remove(
+            "hidden"
+        );
+
+
+        resultContentState.classList.add(
+            "hidden"
+        );
+
+
+        const title =
+            resultEmptyState.querySelector(
+                "h3"
+            );
+
+
+        const text =
+            resultEmptyState.querySelector(
+                "p"
+            );
+
+
+        if (title) {
+
+            title.textContent =
+                "Awaiting Screening";
+
+        }
+
+
+        if (text) {
+
+            text.textContent =
+                "Upload a valid retinal fundus image and " +
+                "run screening to view the model prediction, " +
+                "confidence and Grad-CAM visualization.";
+
+        }
+
+
+        resultClass.textContent =
+            "—";
+
+
+        confidenceText.textContent =
+            "—";
+
+
+        progressBar.style.width =
+            "0%";
+
+
+        severityBadge.className =
+            "severity-badge";
+
+
+        severityBadge.textContent =
+            "—";
+
+
+        document
+            .querySelectorAll(
+                ".probability-row"
+            )
+            .forEach(
+                function (row) {
+
+                    const bar =
+                        row.querySelector(
+                            ".probability-bar"
+                        );
+
+
+                    const value =
+                        row.querySelector(
+                            ".probability-value"
+                        );
+
+
+                    if (bar) {
+
+                        bar.style.width =
+                            "0%";
+
+                    }
+
+
+                    if (value) {
+
+                        value.textContent =
+                            "0.00%";
+
+                    }
+
+                }
+            );
+
+    }
+
+
+
+    /* ============================================================
+       RESET EVERYTHING
+    ============================================================ */
+
+    resetBtn.addEventListener(
+        "click",
+        function () {
+
+
+            selectedFile = null;
+
+            currentResult = null;
+
+            currentOriginalUrl = null;
+
+            currentGradCamUrl = null;
+
+
+            imageUpload.value = "";
+
+
+            fileName.textContent =
+                "Image selected";
+
+
+            uploadIdle.classList.remove(
+                "hidden"
+            );
+
+
+            uploadActive.classList.add(
+                "hidden"
+            );
+
+
+            panelEmptyState.classList.remove(
+                "hidden"
+            );
+
+
+            panelContentState.classList.add(
+                "hidden"
+            );
+
+
+            previewImage.src = "";
+
+            previewCamImage.src = "";
+
+
+            previewImage.classList.remove(
+                "hidden",
+                "clahe-preview"
+            );
+
+
+            previewCamImage.classList.add(
+                "hidden"
+            );
+
+
+            analyzeBtn.disabled = true;
+
+
+            resetResultPanel();
+
+
+            document
+                .querySelectorAll(
+                    ".view-mode-btn"
+                )
+                .forEach(
+                    function (button) {
+
+                        button.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+            const originalButton =
+                document.querySelector(
+                    '.view-mode-btn[data-mode="original"]'
+                );
+
+
+            if (originalButton) {
+
+                originalButton.classList.add(
+                    "active"
+                );
+
+            }
+
+        }
+    );
+
+
+
+    /* ============================================================
+       PRINT REPORT
+    ============================================================ */
+
+    printReportBtn.addEventListener(
+        "click",
+        function () {
+
+
+            if (!currentResult) {
+
+                return;
+
+            }
+
+
+            document.getElementById(
+                "printClass"
+            ).textContent =
+                currentResult.prediction || "—";
+
+
+            document.getElementById(
+                "printConfidence"
+            ).textContent =
+                Number(
+                    currentResult.confidence || 0
+                ).toFixed(2) + "%";
+
+
+            const printOriginalImg =
+                document.getElementById(
+                    "printOriginalImg"
+                );
+
+
+            const printCamImg =
+                document.getElementById(
+                    "printCamImg"
+                );
+
+
+            if (currentOriginalUrl) {
+
+                printOriginalImg.src =
+                    currentOriginalUrl;
+
+            }
+
+
+            if (currentGradCamUrl) {
+
+                printCamImg.src =
+                    currentGradCamUrl;
+
+            }
+
+
+            updatePrintProbabilities(
+                currentResult.probabilities
+            );
+
+
+            window.print();
+
+        }
+    );
+
+
+
+    /* ============================================================
+       PRINT PROBABILITIES
+    ============================================================ */
+
+    function updatePrintProbabilities(
+        probabilities
+    ) {
+
+        const table =
+            document.getElementById(
+                "printProbabilitiesTable"
+            );
+
+
+        table.innerHTML = "";
+
+
+        if (!Array.isArray(probabilities)) {
+            return;
+        }
+
+
+        probabilities.forEach(
+            function (item) {
+
+                const row =
+                    document.createElement("tr");
+
+
+                const classCell =
+                    document.createElement("td");
+
+
+                const stageCell =
+                    document.createElement("td");
+
+
+                const probabilityCell =
+                    document.createElement("td");
+
+
+                classCell.textContent =
+                    item.stage;
+
+
+                stageCell.textContent =
+                    item.name;
+
+
+                probabilityCell.textContent =
+                    Number(
+                        item.probability || 0
+                    ).toFixed(2) + "%";
+
+
+                row.appendChild(
+                    classCell
+                );
+
+
+                row.appendChild(
+                    stageCell
+                );
+
+
+                row.appendChild(
+                    probabilityCell
+                );
+
+
+                table.appendChild(
+                    row
+                );
+
+            }
+        );
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
